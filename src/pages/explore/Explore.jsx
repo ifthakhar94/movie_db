@@ -1,9 +1,9 @@
 import React from 'react';
-import "./style.scss"
+import './style.scss';
 const Explore = () => {
     return (
         <div>
-            
+            <h2>sdfsdf</h2>
         </div>
     );
 };
