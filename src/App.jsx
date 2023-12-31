@@ -17,12 +17,18 @@ function App() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        apiTesting();
+        fetchApiConfig();
     }, []);
 
-    const apiTesting = () => {
-        fetchDataFromAPI('/movie/popular').then((res) => {
-            dispatch(getApiConfigurations(res));
+    const fetchApiConfig = () => {
+        fetchDataFromAPI('/configuration').then((res) => {
+            const url = {
+                backdrop: res.images.secure_base_url + 'original',
+                poster: res.images.secure_base_url + 'original',
+                profile: res.images.secure_base_url + 'original',
+            };
+
+            dispatch(getApiConfigurations(url));
         });
     };
 

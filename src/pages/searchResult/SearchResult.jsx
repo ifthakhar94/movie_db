@@ -1,9 +1,9 @@
 import React from 'react';
-import "./style.scss"
+import './style.scss';
 const SearchResult = () => {
     return (
         <div>
-            
+            <h2>Search Result Page!!!</h2>
         </div>
     );
 };
